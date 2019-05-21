@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leand\\Documents\\git\\OData\\OData\\OData.csproj": {}
+    "C:\\Users\\leand\\Documents\\git\\odata_web_api_core\\OData\\OData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leand\\Documents\\git\\OData\\OData\\OData.csproj": {
+    "C:\\Users\\leand\\Documents\\git\\odata_web_api_core\\OData\\OData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leand\\Documents\\git\\OData\\OData\\OData.csproj",
+        "projectUniqueName": "C:\\Users\\leand\\Documents\\git\\odata_web_api_core\\OData\\OData.csproj",
         "projectName": "OData",
-        "projectPath": "C:\\Users\\leand\\Documents\\git\\OData\\OData\\OData.csproj",
+        "projectPath": "C:\\Users\\leand\\Documents\\git\\odata_web_api_core\\OData\\OData.csproj",
         "packagesPath": "C:\\Users\\leand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leand\\Documents\\git\\OData\\OData\\obj\\",
+        "outputPath": "C:\\Users\\leand\\Documents\\git\\odata_web_api_core\\OData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
