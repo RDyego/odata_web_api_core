@@ -45,16 +45,101 @@ namespace OData
             app.UseMvc(
                 b =>
                 {
-                    b.MapODataServiceRoute("odata", "odata", GetEdmModel());
+                    b.MapODataServiceRoute("aluno", "odata", GetEdmModelAluno());
+                    b.MapODataServiceRoute("cadeiras", "odata", GetEdmModelCadeiras());
+                    b.MapODataServiceRoute("curso", "odata", GetEdmModelCurso());
+                    b.MapODataServiceRoute("matricula", "odata", GetEdmModelMatricula());
+                    b.MapODataServiceRoute("situacao", "odata", GetEdmModelSituacao());
+                    b.MapODataServiceRoute("usuario", "odata", GetEdmModelUsuario());
                 });
         }
 
-        public static IEdmModel GetEdmModel()
+        public static IEdmModel GetEdmModelSituacao()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+
+            // Habilita funções OData como $filter, $select e etc..
+            builder.EntitySet<Situacao>(nameof(Situacao))
+                   .EntityType
+                   .Filter()
+                   .Count()
+                   .Expand()
+                   .OrderBy()
+                   .Page()
+                   .Select();
+            return builder.GetEdmModel();
+        }
+
+        public static IEdmModel GetEdmModelCurso()
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
 
             // Habilita funções OData como $filter, $select e etc..
             builder.EntitySet<Curso>(nameof(Curso))
+                   .EntityType
+                   .Filter()
+                   .Count()
+                   .Expand()
+                   .OrderBy()
+                   .Page()
+                   .Select();
+            return builder.GetEdmModel();
+        }
+
+        public static IEdmModel GetEdmModelAluno()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+
+            // Habilita funções OData como $filter, $select e etc..
+            builder.EntitySet<Aluno>(nameof(Aluno))
+                   .EntityType
+                   .Filter()
+                   .Count()
+                   .Expand()
+                   .OrderBy()
+                   .Page()
+                   .Select();
+            return builder.GetEdmModel();
+        }
+
+        public static IEdmModel GetEdmModelMatricula()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+
+            // Habilita funções OData como $filter, $select e etc..
+            builder.EntitySet<Matricula>(nameof(Matricula))
+                   .EntityType
+                   .Filter()
+                   .Count()
+                   .Expand()
+                   .OrderBy()
+                   .Page()
+                   .Select();
+            return builder.GetEdmModel();
+        }
+
+        public static IEdmModel GetEdmModelCadeiras()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+
+            // Habilita funções OData como $filter, $select e etc..
+            builder.EntitySet<Cadeiras>(nameof(Cadeiras))
+                   .EntityType
+                   .Filter()
+                   .Count()
+                   .Expand()
+                   .OrderBy()
+                   .Page()
+                   .Select();
+            return builder.GetEdmModel();
+        }
+
+        public static IEdmModel GetEdmModelUsuario()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+
+            // Habilita funções OData como $filter, $select e etc..
+            builder.EntitySet<Usuario>(nameof(Usuario))
                    .EntityType
                    .Filter()
                    .Count()

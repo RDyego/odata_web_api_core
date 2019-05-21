@@ -6,17 +6,17 @@ using System.Linq;
 
 namespace OData.Controllers
 {
-    [Route("api/curso")]
-    public class CursoController : ODataController
+    [Route("api/aluno")]
+    public class AlunoController : ODataController
     {
         private readonly Context _context;
 
-        public CursoController(Context context)
+        public AlunoController(Context context)
         {
             _context = context;
         }
 
-        [EnableQuery ]
-        public IQueryable<Curso> Get() => _context.Curso.AsQueryable();
+        [EnableQuery]
+        public IQueryable<Aluno> Get() => _context.Aluno.AsQueryable();
     }
 }

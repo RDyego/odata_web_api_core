@@ -13,6 +13,10 @@ namespace OData.Contexto
 
         public DbSet<Situacao> Situacao { get; set; }
         public DbSet<Curso> Curso { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Matricula> Matricula { get; set; }
+        public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Cadeiras> Cadeiras { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,6 +27,10 @@ namespace OData.Contexto
         {
             modelBuilder.ApplyConfiguration(new CursoConfiguracao());
             modelBuilder.ApplyConfiguration(new SituacaoConfiguracao());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguracao());
+            modelBuilder.ApplyConfiguration(new MatriculaConfiguracao());
+            modelBuilder.ApplyConfiguration(new AlunoConfiguracao());
+            modelBuilder.ApplyConfiguration(new CadeirasConfiguracao());
         }
     }
 }
